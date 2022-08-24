@@ -46,6 +46,7 @@ Change to directory where ShellHub is located
 (the one that you just cloned with git) and run:
 
 ```
+make keygen
 make start
 ```
 
