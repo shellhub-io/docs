@@ -11,7 +11,7 @@ Each script must be run from the root of ShellHub project dir.
 :::tip
 
 If you are managing a ShellHub Enterprise self-hosted instance,
-all administrative tasks can be performed via the [Admin Console](/admin-manual/admin-console/).
+all administrative tasks can be performed via the Admin Console.
 
 :::
 

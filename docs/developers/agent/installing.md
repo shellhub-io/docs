@@ -8,7 +8,7 @@ sidebar_position: 1
 
 This is an advanced reference guide of alternate install methods for
 developers and integrators. If you are end-user
-see [Adding a device](/user-manual/adding-device).
+see [Adding a device](/user-guides/devices/adding).
 
 :::
 

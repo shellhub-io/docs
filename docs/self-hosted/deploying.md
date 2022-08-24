@@ -79,7 +79,7 @@ load balancers in-front of the running container.
 
 ShellHub provides automatic HTTPS support using *Let's Encrypt*  with reasonable SSL settings, HTTP/2 and WebSockets support out-of-the-box.
 
-Please see [`SHELLHUB_AUTO_SSL`](/admin-manual/configuring/#shellhub_auto_ssl) config option.
+Please see [`SHELLHUB_AUTO_SSL`](/self-hosted/configuring/#shellhub_auto_ssl) config option.
 
 #### NGINX SSL terminator
 
