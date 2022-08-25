@@ -70,6 +70,10 @@ const config = {
         },
 
         items: [
+          {
+            type: 'search',
+            position: 'right',
+          },
         ],
       },
       footer: {
@@ -81,6 +85,13 @@ const config = {
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
+      },
+      algolia: {
+        appId: 'A8BE0Z47FQ',
+        apiKey: '22db2ac067d4d9f627067f45fb418545',
+        indexName: 'docs',
+        contextualSearch: true,
+        searchParameters: {},
       },
     }),
 };
