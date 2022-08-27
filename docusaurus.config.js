@@ -87,9 +87,9 @@ const config = {
         darkTheme: darkCodeTheme,
       },
       algolia: {
-        appId: 'A8BE0Z47FQ',
-        apiKey: '22db2ac067d4d9f627067f45fb418545',
-        indexName: 'docs',
+        appId: 'U0BS9FJALJ',
+        apiKey: 'c2ba62069b528a88c6a1f702a0bfcdfb',
+        indexName: 'shellhub',
         contextualSearch: true,
         searchParameters: {},
       },
