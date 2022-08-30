@@ -6,7 +6,7 @@ The easiest way to install ShellHub agent is with our automatic one-line install
 
 :::tip
 For more information about other install methods,
-see [Installing Agent](https://github.com/shellhub-io/meta-shellhub) from Developer's Manual.
+see [Installing Agent](/developers/agent/installing) from Developer's Guide.
 :::
 
 From the Devices page, click **Add Device** button and follow instructions.
