@@ -2,6 +2,8 @@
 sidebar_position: 1
 ---
 
+import {config} from '@site/src/config';
+
 # Installation
 
 :::info
@@ -55,11 +57,11 @@ ShellHub Agent requires Go 1.18 to compile, please refer to the [official docume
 
 ::::
 
-First checkout the latest stable version (*v0.9.6*) of ShellHub as follows: 
+<p>First checkout the latest stable version (<strong>{config.version}</strong>) of ShellHub as follows:</p>
 
-```
-git clone -b v0.9.6 https://github.com/shellhub-io/shellhub.git shellhub
-```
+<pre>
+git clone -b {config.version} https://github.com/shellhub-io/shellhub.git shellhub
+</pre>
 
 Next, we need to execute the following command to build ShellHub Agent:
 

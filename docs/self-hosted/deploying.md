@@ -3,6 +3,7 @@ sidebar_position: 1
 ---
 
 import Link from '@docusaurus/Link';
+import {config} from '@site/src/config';
 
 # Deploying
 
@@ -33,12 +34,11 @@ Before continuing, make sure:
 
 ## Downloading the latest stable version {#downloading}
 
-Checkout the latest stable version (*v0.9.6*)
-of ShellHub as follows: 
+<p>Checkout the latest stable version (<strong>{config.version}</strong>) of ShellHub as follows:</p>
 
-```
-git clone -b v0.9.6 https://github.com/shellhub-io/shellhub.git
-```
+<pre>
+git clone -b {config.version} https://github.com/shellhub-io/shellhub.git
+</pre>
 
 ## Running {#running}
 
