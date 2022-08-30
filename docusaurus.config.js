@@ -68,8 +68,17 @@ const config = {
           src: 'img/logo.svg',
           srcDark: 'img/logo-dark.svg',
         },
-
         items: [
+          {
+            to: 'https://cloud.shellhub.io',
+            label: 'ShellHub Cloud',
+            position: 'right',
+          },  
+          {
+            href: 'https://github.com/shellhub-io/shellhub/',
+            label: 'GitHub',
+            position: 'right',
+          },
           {
             type: 'search',
             position: 'right',
