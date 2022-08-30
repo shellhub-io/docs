@@ -95,6 +95,9 @@ const config = {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
       },
+      googleAnalytics: {
+        trackingID: 'UA-168888230-2',
+      },
       algolia: {
         appId: 'U0BS9FJALJ',
         apiKey: 'c2ba62069b528a88c6a1f702a0bfcdfb',
