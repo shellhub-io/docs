@@ -2,6 +2,8 @@
 sidebar_position: 4
 ---
 
+import {config} from '@site/src/config';
+
 # Upgrading
 
 ShellHub cuts regular releases for Community Edition to keep it
@@ -18,9 +20,7 @@ We actively develop ShellHub to add new features and remove bugs, and encourage 
 2. Stop the instance: `make stop`
 
 3. Fetch remote changes: `git remote update origin`
-
-4. Checkout the latest stable release: `git checkout {{ shellhub.latest_version }}`
-
+<li>Checkout the latest stable release: <code>git checkout { config.version }</code></li>
 6. Bring up the instance: `make start`
 
 :::caution
