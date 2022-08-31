@@ -50,6 +50,9 @@ const config = {
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
+        googleAnalytics: {
+          trackingID: 'UA-168888230-2',
+        },
       }),
     ],
   ],
@@ -94,9 +97,6 @@ const config = {
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
-      },
-      googleAnalytics: {
-        trackingID: 'UA-168888230-2',
       },
       algolia: {
         appId: 'U0BS9FJALJ',
