@@ -62,7 +62,7 @@ export default function DocItemFooter() {
         repoId='MDEwOlJlcG9zaXRvcnkxODcwNzg2MzE='
         category='General'
         categoryId='MDE4OkRpc2N1c3Npb25DYXRlZ29yeTMyMDA1MjEy'
-        mapping='pathname'
+        mapping='title'
         strict='0'
         reactionsEnabled='1'
         emitMetadata='0'
