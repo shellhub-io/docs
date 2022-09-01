@@ -27,25 +27,6 @@ const config = {
     locales: ['en'],
   },
 
-  scripts: [
-    {
-      src: 'https://giscus.app/client.js',
-      async: true,
-      crossorigin: 'anonymous',
-      'data-repo': 'shellhub-io/shellhub',
-      'data-repo-id': 'MDEwOlJlcG9zaXRvcnkxODcwNzg2MzE=',
-      'data-category': 'General',
-      'data-category-id': 'MDE4OkRpc2N1c3Npb25DYXRlZ29yeTMyMDA1MjEy',
-      'data-mapping': 'pathname',
-      'data-strict': '0',
-      'data-reactions-enabled': '1',
-      'data-emit-metadata': '0',
-      'data-input-position': 'top',
-      'data-theme': 'dark',
-      'data-lang': 'en',
-    },
-  ],
-
   presets: [
     [
       'classic',
