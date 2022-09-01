@@ -67,8 +67,8 @@ const config = {
       navbar: {
         hideOnScroll: true,
         logo: {
-          alt: 'My Site Logo',
-          src: 'img/logo.svg',
+          alt: 'ShellHub',
+          src: 'img/logo.png',
           srcDark: 'img/logo-dark.svg',
         },
         items: [
