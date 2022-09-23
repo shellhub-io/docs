@@ -100,6 +100,15 @@ When using NGINX do not forget to allow websocket traffic to be handled properly
 This can be done by adding the following blocks to your NGINX configuration:
 
 ```
+ location / {
+     proxy_pass http://127.0.0.1:<SHELLHUB_HTTP_PORT>;
+     proxy_http_version 1.1;
+     proxy_set_header Upgrade $http_upgrade;
+     proxy_set_header Connection "upgrade";
+     proxy_read_timeout 86400;
+     proxy_set_header Host $host;
+}
+
 location /ws/ {
      proxy_pass http://127.0.0.1:<SHELLHUB_HTTP_PORT>;
      proxy_http_version 1.1;
