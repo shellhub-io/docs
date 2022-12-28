@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 3
 ---
 
 # Getting Started
@@ -12,6 +12,7 @@ and you'll be able to start accessing your devices within minutes.
 
 If you prefer to self-host ShellHub, you can follow the documentation
 to set up the Community Edition on your own server.
+
 The Community Edition is open-source and includes the core features of ShellHub.
 It's a great option if you want complete control over your infrastructure.
 This means you can choose the hardware, operating system, and network configuration
