@@ -5,11 +5,28 @@ sidebar_position: 1
 
 # Introduction
 
-ShellHub is a modern SSH server for remotely accessing Linux devices via command line (using any SSH client) or web-based user interface. It is intended to be used instead of sshd.
+ShellHub is a centralized SSH gateway that allows users to remotely access and
+manage their servers and devices from anywhere, using a web browser or mobile app.
+It offers a secure and convenient way to connect and control your servers and devices.
 
-Typically, if you want to SSH a Linux device on a local network, you just need to know its IP address. However, in order to access a Linux device from outside the local network, you will have to go through a few inconveniences, such as getting its public IP address and configuring the router. Changing the VPN/firewall configuration can be cumbersome if the device is behind a corporate firewall that does not allow SSH connections.
+One of the main benefits of ShellHub is that it acts as a central gateway for all your
+Linux servers and devices, allowing you to access them from anywhere with an internet connection.
+This means you don't have to worry about getting its public IP address, configuring the router
+, changing VPN/firewall settings or using a jump host to access your servers and devices.
+This can be inconvenient and time-consuming.
 
-ShellHub provides a way to avoid all these hassles, helping you easily and seamlessly access any Linux device behind firewall and NAT.
+ShellHub also allows you to access and manage multiple servers and devices from a single interface,
+saving time and making it easier to keep track of all your servers and devices.
+The platform also includes enhanced security features such as public key authentication,
+SSH firewall rules to prevent unauthorized access, audit logging, and session recording
+to provide a record of activity for compliance purposes.
+
+Another benefit of ShellHub is its ability to work with a variety of devices,
+including embedded Linux devices. This makes it a versatile tool for a wide range of applications,
+from managing servers in a data center to controlling industrial equipment or Internet of Things (IoT) devices.
+
+Overall, ShellHub is a powerful tool for managing and securing your servers and devices,
+whether you are a small business, a large enterprise, or an individual user.
 
 This documentation incorporates a description of the features and capabilities, modes of operation, and step-by-step getting started guide for running a self-hosted ShellHub server and use.
 
