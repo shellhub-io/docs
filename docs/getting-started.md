@@ -1,0 +1,28 @@
+---
+sidebar_position: 2
+---
+
+# Getting Started
+
+If you want to get started with ShellHub as quickly as possible,
+the ShellHub Cloud is the way to go. With the ShellHub Cloud,
+you don't need to worry about provisioning a server or setting up any infrastructure.
+Simply [sign up for an account](https://cloud.shellhub.io/sign-up) on the ShellHub Cloud,
+and you'll be able to start accessing your devices within minutes.
+
+If you prefer to self-host ShellHub, you can follow the documentation
+to set up the Community Edition on your own server.
+The Community Edition is open-source and includes the core features of ShellHub.
+It's a great option if you want complete control over your infrastructure.
+This means you can choose the hardware, operating system, and network configuration
+that best fits your needs. This can be particularly important for organizations
+with strict security or compliance requirements, as you can ensure that your servers
+and devices are configured in a way that meets your specific needs.
+
+No matter which option you choose, you'll need to install the ShellHub Agent on your devices.
+The ShellHub Agent is a lightweight software package that runs on your devices and connects
+them to the ShellHub cloud server. You can install the ShellHub Agent using our one-line installation script,
+which works with all Linux distributions that have Docker installed and properly set up.
+
+Once you've set up the ShellHub Agent on your devices,
+you'll be able to access them using any SSH client or the ShellHub web interface.
