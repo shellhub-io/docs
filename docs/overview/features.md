@@ -4,6 +4,10 @@ sidebar_position: 2
 
 # Features
 
+ShellHub is a powerful and feature-rich platform for remotely accessing and
+managing Linux servers and devices. Some of the key features that make ShellHub
+stand out from the standard OpenSSH server and other similar solutions include:
+
 ## Native SSH support
 
 ShellHub provides native SSH support, allowing you to access any device

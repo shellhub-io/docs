@@ -4,7 +4,9 @@ sidebar_position: 1
 
 # Concepts
 
-There are few basic concepts that are important to understand the ShellHub. Those basic concepts are detailed below.
+The following are the core concepts that describe a ShellHub deployment.
+As you set up and manage ShellHub, you will encounter these terms frequently.
+It is important to understand these concepts before reading further in the documentation.
 
 ## SSH gateway
 
