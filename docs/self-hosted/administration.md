@@ -43,6 +43,10 @@ Add namespace to a local running instance of ShellHub.
 
 - **Usage**: `./bin/add-namespace <namespace> <owner>`
 
+:::caution
+Make sure to replace **owner** with your account username and **namespace** with a valid [RFC1123](https://www.rfc-editor.org/rfc/rfc1123) hostname format.
+:::
+
 ### `del-namespace`
 
 Delete namespace to a local running instance of ShellHub.
