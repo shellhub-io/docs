@@ -55,6 +55,25 @@ const config = {
         },
       }),
     ],
+    [
+      'redocusaurus',
+      {
+        specs: [
+          {
+            spec: 'https://shellhub-openapi-files.nyc3.digitaloceanspaces.com/latest/community-openapi.yaml',
+            route: 'developers/openapi/community',
+          },
+          {
+            spec: 'https://shellhub-openapi-files.nyc3.digitaloceanspaces.com/latest/cloud-openapi.yaml',
+            route: 'developers/openapi/cloud',
+          },
+        ],
+        theme: {
+          // Change with your site colors
+          primaryColor: '#1890ff', // TODO: change to ShellHub color.
+        },
+      },
+    ],
   ],
 
   themeConfig:
