@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'ShellHub',
   tagline: 'Get seamless remote access to any Linux device',
-  url: 'https://your-docusaurus-test-site.com',
+  url: 'https://docs.shellhub.io/',
   baseUrl: '/',
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
