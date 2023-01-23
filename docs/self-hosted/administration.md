@@ -23,6 +23,10 @@ Add user account to a local running instance of ShellHub.
 
 - **Usage**: `./bin/add-user <username> <password> <email>`
 
+:::info
+The password can contain any characters, but the string length should be between 5 and 30 characters
+:::
+
 ### `del-user`
 
 Delete user account from a local running instance of ShellHub.
