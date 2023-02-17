@@ -60,11 +60,11 @@ const config = {
       {
         specs: [
           {
-            spec: 'https://shellhub-openapi-files.nyc3.digitaloceanspaces.com/latest/community-openapi.yaml',
+            spec: 'https://shellhub-openapi-files.nyc3.digitaloceanspaces.com/community-openapi.yaml',
             route: 'developers/openapi/community',
           },
           {
-            spec: 'https://shellhub-openapi-files.nyc3.digitaloceanspaces.com/latest/cloud-openapi.yaml',
+            spec: 'https://shellhub-openapi-files.nyc3.digitaloceanspaces.com/cloud-openapi.yaml',
             route: 'developers/openapi/cloud',
           },
         ],
