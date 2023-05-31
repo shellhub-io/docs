@@ -55,7 +55,7 @@ Where:
 
 ShellHub Agent requires Go 1.18 to compile, please refer to the [official documentation](https://golang.org/doc/install) for how to install Go in your system.
 
-::::
+:::
 
 <p>First checkout the latest stable version (<strong>{config.version}</strong>) of ShellHub as follows:</p>
 
