@@ -65,10 +65,12 @@ git clone -b {config.version} https://github.com/shellhub-io/shellhub.git shellh
 
 Next, we need to execute the following command to build ShellHub Agent:
 
-```
+<pre>
 cd shellhub/agent
+</pre>
+<pre>
 go build -ldflags "-X main.AgentVersion={ config.version }"
-```
+</pre>
 
 Use `file ./agent` to check if executable was built.
 
