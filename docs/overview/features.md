@@ -53,3 +53,11 @@ including all user activity that occurs during the session.
 These recordings can then be replayed via a built-in session player in the ShellHub Web UI.
 This feature can be useful for a variety of purposes, such as training and documentation,
 as well as for tracking and monitoring user activity on your servers and devices.
+
+## Container Remote Access
+
+ShellHub seamlessly integrates with Docker, enabling you to remotely access Docker containers.
+With this feature, users can securely connect to containers. Whether you're troubleshooting,
+performing maintenance, or overseeing your containerized services,
+ShellHub's Container Remote Access simplifies container remote access management,
+providing flexibility and control over containerized environments.
