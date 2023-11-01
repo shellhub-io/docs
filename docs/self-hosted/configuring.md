@@ -64,3 +64,25 @@ Redirect requests from HTTP port to HTTPS port
 - Default: localhost
 
 Domain of the server
+
+### `SHELLHUB_CONNECTOR`
+
+- Default: false
+
+Enables container remote access.
+When enabled, all containers on the Docker host will be automatically added to a namespace
+configured by the `SHELLHUB_CONNECTOR_TENANT_ID` variable.
+
+:::caution Important Security Notice
+Please note that user access within the containers is restricted as a crucial security measure.
+
+For password-based authentication, users who do not have a password defined in the containers `/etc/shadow`
+will be denied access to connection attempts. This means that only users with properly configured passwords (via `passwd` command) will be able to attempt connections.
+
+Alternatively, users can utilize the public key authentication scheme, even if they do not have a password defined
+in the containers `/etc/shadow` file.
+:::
+
+### `SHELLHUB_CONNECTOR_TENANT_ID`
+
+This variable specifies the namespace to which containers will be added when the container remote access is enabled.
