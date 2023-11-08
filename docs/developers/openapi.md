@@ -8,8 +8,8 @@ OpenAPI, also known as the OpenAPI Specification (OAS), is a specification for d
 
 We provide two OpenAPI specifications, the `community` version and the `cloud` version.
 
-## [Community](openapi/community/)
+## [Community](/developers/openapi/community)
 The `community` version is specifically designed for the `community` instance and contains only the routes that are available in the `community`.
 
-## [Cloud](openapi/cloud/)
+## [Cloud](/developers/openapi/cloud)
 The `cloud` version includes all the routes from the `community` version plus additional routes that are specific to the `cloud` instance. 
