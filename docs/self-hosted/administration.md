@@ -4,67 +4,60 @@ sidebar_position: 4
 
 # Administration
 
-ShellHub comes with a useful scripts for administering a self-hosted ShellHub instance.
+ShellHub provides useful scripts for administering a self-hosted ShellHub instance. These scripts are located under the `./bin/cli` executable, which can be found at the root of the ShellHub project directory.
 
-Each script must be run from the root of ShellHub project dir.
-
-:::tip
-
-If you are managing a ShellHub Enterprise self-hosted instance,
-all administrative tasks can be performed via the Admin Console.
-
-:::
+> **_TIP:_** If you are managing a self-hosted instance of ShellHub Enterprise, all administrative tasks can be performed through the Admin Console.
 
 ## User management scripts
 
-### `add-user`
+### Create a user
 
 Add user account to a local running instance of ShellHub.
 
-- **Usage**: `./bin/add-user <username> <password> <email>`
+**Usage**: `./bin/cli user create <username> <password> <email>`
 
-:::info
-The password can contain any characters, but the string length should be between 5 and 30 characters
-:::
+> **_NOTE:_** The password can contain any characters, but the string length should be between 5 and 32 characters 
 
-### `del-user`
+### Delete a user
 
 Delete user account from a local running instance of ShellHub.
 
-- **Usage**: `./bin/del-user <username>`
+**Usage**: `./bin/cli user delete <username>`
 
-### `reset-user-password`
+### Reset a user's password
 
 Reset user account password from a local running instance of ShellHub.
 
-- **Usage**: `./bin/reset-user-password <username> <password>`
+**Usage**: `./bin/cli user password <username> <password>`
 
 ## Namespace management scripts
 
-### `add-namespace`
+### Create a namespace
 
 Add namespace to a local running instance of ShellHub.
 
-- **Usage**: `./bin/add-namespace <namespace> <owner>`
+**Usage**: `bin/namespace create <namespace> <owner> [tenant]`
 
-:::caution
-Make sure to replace **owner** with your account username and **namespace** with a valid [RFC1123](https://www.rfc-editor.org/rfc/rfc1123) hostname format.
-:::
+> **_NOTE_:** The namespace must adhere to a valid [RFC1123](https://www.rfc-editor.org/rfc/rfc1123) hostname format, but it should not contain dots.
 
-### `del-namespace`
+> **_NOTE_:** The **[tenant]** is an optional UUID value, automatically generated when not provided.
+
+### Delete a namespace
 
 Delete namespace to a local running instance of ShellHub.
 
-- **Usage**: `./bin/del-namespace <namespace>`
+**Usage**: `./bin/cli namespace delete <namespace>`
 
-### `add-user-namespace`
+### Add a member to the namespace
 
-Add user to specific namespace to a local running instance of ShellHub.
+Add a user to a specific namespace in a locally running instance of ShellHub.
 
-- **Usage**: `./bin/add-user-namespace <username> <namespace>`
+**Usage**: `./bin/cli namespace member add <username> <namespace> <role>`
 
-### `del-user-namespace`
+> **_NOTE_:** The role must define the privileges the user has on this namespace and can be `owner`, `operator`, or `observer`.
+
+### Remove namespace member
 
 Delete user from a specific namespace to a local running instance of ShellHub.
 
-- **Usage**: `./bin/del-user-namespace <username> <namespace>`
+**Usage**: `./bin/cli namespace member remove <username> <namespace>`
