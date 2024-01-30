@@ -85,7 +85,7 @@ Please see [`SHELLHUB_AUTO_SSL`](/self-hosted/configuring/#shellhub_auto_ssl) co
 #### NGINX SSL terminator
 
 In case you are using NGINX as SSL terminator instead,
-make sure to set the `SHELLHUB_WEB_PORT` to only bind to localhost by
+make sure to set the `SHELLHUB_HTTP_PORT` to only bind to localhost by
 adding the following line to the `docker-compose.override.yml`:
 
 ```yaml
@@ -93,7 +93,7 @@ version: '3.7'
 services:
   gateway:
       ports:
-       - "127.0.0.1:${SHELLHUB_HTTP_PORT}:80"
+       - "${SHELLHUB_BIND_ADDRESS}:${SHELLHUB_HTTP_PORT}:80"
 ```
 
 When using NGINX do not forget to allow websocket traffic to be handled properly.
@@ -101,7 +101,7 @@ This can be done by adding the following blocks to your NGINX configuration:
 
 ```
  location / {
-     proxy_pass http://127.0.0.1:<SHELLHUB_HTTP_PORT>;
+     proxy_pass http://<SHELLHUB_BIND_ADDRESS>:<SHELLHUB_HTTP_PORT>;
      proxy_http_version 1.1;
      proxy_set_header Upgrade $http_upgrade;
      proxy_set_header Connection "upgrade";
@@ -110,7 +110,7 @@ This can be done by adding the following blocks to your NGINX configuration:
 }
 
 location /ws/ {
-     proxy_pass http://127.0.0.1:<SHELLHUB_HTTP_PORT>;
+     proxy_pass http://<SHELLHUB_BIND_ADDRESS>:<SHELLHUB_HTTP_PORT>;
      proxy_http_version 1.1;
      proxy_set_header Upgrade $http_upgrade;
      proxy_set_header Connection "upgrade";
@@ -118,7 +118,7 @@ location /ws/ {
 }
 
 location /ssh/ {
-     proxy_pass http://127.0.0.1:<SHELLHUB_HTTP_PORT>;
+     proxy_pass http://<SHELLHUB_BIND_ADDRESS>:<SHELLHUB_HTTP_PORT>;
      proxy_http_version 1.1;
      proxy_set_header Upgrade $http_upgrade;
      proxy_set_header Connection "upgrade";
