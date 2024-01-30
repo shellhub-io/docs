@@ -17,6 +17,12 @@ By default, the `.env.override` file does not exists, so you need need to create
 All default values are inherited from `.env` file.
 :::
 
+The bind address for the ShellHub gateway's container to bind on
+
+### `SHELLHUB_BIND_ADDRESS`
+
+- Default: 0.0.0.0
+
 ### `SHELLHUB_HTTP_PORT`
 
 - Default: 80
