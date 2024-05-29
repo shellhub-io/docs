@@ -61,3 +61,9 @@ With this feature, users can securely connect to containers. Whether you're trou
 performing maintenance, or overseeing your containerized services,
 ShellHub's Container Remote Access simplifies container remote access management,
 providing flexibility and control over containerized environments.
+
+## Device tagging
+
+Device tagging in ShellHub allows users to categorize and manage devices efficiently by 
+assigning tags, facilitating easy organization and filtering. This improves device management 
+and operational efficiency.
