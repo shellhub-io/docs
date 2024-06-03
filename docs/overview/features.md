@@ -67,3 +67,7 @@ providing flexibility and control over containerized environments.
 Device tagging in ShellHub allows users to categorize and manage devices efficiently by 
 assigning tags, facilitating easy organization and filtering. This improves device management 
 and operational efficiency.
+
+## Multi-Factor Authentication (MFA)
+
+ShellHub's Multi-Factor Authentication (MFA) enhances security by requiring users to enter a one-time verification code sent using your favorite TOPT Provider before granting access to the platform. This additional layer of security helps protect your account from unauthorized access, even if your password is compromised.
