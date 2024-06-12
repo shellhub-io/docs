@@ -29,16 +29,36 @@
 }
 
 html[data-theme='dark'] {
-    --ifm-background-color: #272b33;
-    --ifm-background-surface-color: #272b33;
-    --ifm-navbar-shadow: 0;
+  --ifm-background-color: #1E2127;
+  --ifm-background-surface-color: #272b33;
+  --ifm-navbar-shadow: 0;
 }
 
-
 html[data-theme='dark'] pre code {
-    background-color: var(--ifm-code-background);
+  background-color: var(--ifm-code-background);
 }
 
 html[data-theme='dark'] footer {
-    --ifm-footer-background-color: #18191b;
+  --ifm-footer-background-color: #18191b;
 }
+
+nav[aria-label='Main'] {
+  background-color: #18191B;
+  margin-left: var(--doc-sidebar-width);
+  border-bottom: 1px solid var(--ifm-toc-border-color); 
+}
+
+@media screen and (max-width: 996px) {
+  nav[aria-label='Main'] {
+    margin-left: 0;
+  }
+}
+
+main {
+  background-color: #18191B; 
+}
+
+.markdown img {
+  box-shadow: 0px 0px 5px 0px rgba(102,122,204,0.5);
+}
+

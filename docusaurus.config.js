@@ -83,7 +83,7 @@ const config = {
         disableSwitch: true,
       },
       navbar: {
-        hideOnScroll: true,
+        hideOnScroll: false,
         logo: {
           alt: 'ShellHub',
           src: 'img/logo.png',
@@ -105,12 +105,6 @@ const config = {
             position: 'right',
           },
         ],
-      },
-      footer: {
-        style: 'dark',
-        links: [
-        ],
-        copyright: `Copyright © ${new Date().getFullYear()} ShellHub.`,
       },
       prism: {
         theme: prismThemes.github,
