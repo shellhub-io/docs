@@ -1,8 +1,9 @@
+---
+sidebar_position: 1
+---
+
 # User Guides
 
-Welcome to the User Guides section of the ShellHub documentation!
-Here you will find a variety of guides on how to use ShellHub's various features and capabilities.
-
-import DocCardList from '@theme/DocCardList';
-
-<DocCardList />
+Welcome to the ShellHub User Guides! This section is designed to help you understand
+and make the most of ShellHub, a powerful and versatile tool for managing remote access to your devices.
+Whether you are a beginner or an advanced user, these guides are designed to help you every step of the way.
