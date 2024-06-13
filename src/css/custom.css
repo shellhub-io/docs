@@ -44,7 +44,6 @@ html[data-theme='dark'] footer {
 
 nav[aria-label='Main'] {
   background-color: #18191B;
-  margin-left: var(--doc-sidebar-width);
   border-bottom: 1px solid var(--ifm-toc-border-color); 
 }
 

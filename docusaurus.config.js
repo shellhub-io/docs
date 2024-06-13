@@ -60,12 +60,12 @@ const config = {
       {
         specs: [
           {
+            id: 'community-openapi',
             spec: 'https://shellhub-openapi-files.nyc3.digitaloceanspaces.com/community-openapi.yaml',
-            route: 'developers/openapi/community',
           },
           {
+            id: 'cloud-openapi',
             spec: 'https://shellhub-openapi-files.nyc3.digitaloceanspaces.com/cloud-openapi.yaml',
-            route: 'developers/openapi/cloud',
           },
         ],
         theme: {
@@ -82,6 +82,11 @@ const config = {
       colorMode: {
         defaultMode: 'dark',
         disableSwitch: true,
+      },
+      docs: {
+        sidebar: {
+          hideable: true
+        },
       },
       navbar: {
         hideOnScroll: false,
