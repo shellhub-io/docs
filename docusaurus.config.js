@@ -1,7 +1,7 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-import {themes as prismThemes} from 'prism-react-renderer';
+import { themes as prismThemes } from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -32,6 +32,7 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
+          path: 'docs',
           routeBasePath: '/',
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
@@ -91,10 +92,34 @@ const config = {
         },
         items: [
           {
+            type: 'docSidebar',
+            position: 'left',
+            sidebarId: 'docsSidebar',
+            label: 'Overview',
+          },
+          {
+            type: 'docSidebar',
+            position: 'left',
+            sidebarId: 'userGuidesSidebar',
+            label: 'User Guides',
+          },
+          {
+            type: 'docSidebar',
+            position: 'left',
+            sidebarId: 'selfHostedSidebar',
+            label: 'Self-Hosted',
+          },
+          {
+            type: 'docSidebar',
+            position: 'left',
+            sidebarId: 'developersSidebar',
+            label: 'Developers',
+          },
+          {
             to: 'https://cloud.shellhub.io',
             label: 'ShellHub Cloud',
             position: 'right',
-          },  
+          },
           {
             href: 'https://github.com/shellhub-io/shellhub/',
             label: 'GitHub',

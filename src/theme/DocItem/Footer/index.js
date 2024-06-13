@@ -55,20 +55,22 @@ export default function DocItemFooter() {
   }
   return (
     <>
-      <Giscus
-        loading='async'
-        crossorigin='true'
-        repo='shellhub-io/shellhub'
-        repoId='MDEwOlJlcG9zaXRvcnkxODcwNzg2MzE='
-        category='General'
-        categoryId='MDE4OkRpc2N1c3Npb25DYXRlZ29yeTMyMDA1MjEy'
-        mapping='title'
-        strict='0'
-        reactionsEnabled='1'
-        emitMetadata='0'
-        inputPosition='top'
-        theme='dark_dimmed'
-        lang='en' />
+      {process.env.NODE_ENV != 'development' &&
+        <Giscus
+          loading='async'
+          crossorigin='true'
+          repo='shellhub-io/shellhub'
+          repoId='MDEwOlJlcG9zaXRvcnkxODcwNzg2MzE='
+          category='General'
+          categoryId='MDE4OkRpc2N1c3Npb25DYXRlZ29yeTMyMDA1MjEy'
+          mapping='title'
+          strict='0'
+          reactionsEnabled='1'
+          emitMetadata='0'
+          inputPosition='top'
+          theme='dark_dimmed'
+          lang='en' />
+      }
       <footer
         className={clsx(ThemeClassNames.docs.docFooter, 'docusaurus-mt-lg')}>
         {canDisplayTagsRow && <TagsRow tags={tags} />}
