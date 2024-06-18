@@ -122,7 +122,8 @@ const config = {
           },
           {
             to: 'https://cloud.shellhub.io',
-            label: 'ShellHub Cloud',
+            label: 'Get Started',
+            className: 'nav-link_getting-started',
             position: 'right',
           },
           {
