@@ -3,29 +3,60 @@ slug: /
 sidebar_position: 1
 ---
 
+import DocCardList from '@theme/DocCardList';
+import DocCard from '@theme/DocCard';
+
 # Introduction
 
-ShellHub is a centralized SSH gateway that allows users to remotely access and
-manage their servers and devices from anywhere, using a web browser or mobile app.
-It offers a secure and convenient way to connect and control your servers and devices.
+## What is ShellHub?
 
-One of the main benefits of ShellHub is that it acts as a central gateway for all your
-Linux servers and devices, allowing you to access them from anywhere with an internet connection.
-This means you don't have to worry about getting its public IP address, configuring the router,
-changing VPN/firewall settings or using a jump host to access your servers and devices.
-This can be inconvenient and time-consuming.
+ShellHub is a platform to centralize and secure remote shell access to devices, servers and containers.
 
-ShellHub also allows you to access and manage multiple servers and devices from a single interface,
-saving time and making it easier to keep track of all your servers and devices.
-The platform also includes enhanced security features such as public key authentication,
-SSH firewall rules to prevent unauthorized access, audit logging, and session recording
-to provide a record of activity for compliance purposes.
+![](/img/newdiagram.png)
 
-Another benefit of ShellHub is its ability to work with a variety of devices,
-including embedded Linux devices. This makes it a versatile tool for a wide range of applications,
-from managing servers in a data center to controlling industrial equipment or Internet of Things (IoT) devices.
+## How it Works
 
-Overall, ShellHub is a powerful tool for managing and securing your servers and devices,
-whether you are a small business, a large enterprise, or an individual user.
+ShellHub operates by installing a lightweight agent on each of your devices, servers or containers. This agent establishes a secure connection with the ShellHub server, allowing you to remotely access and manage these systems through the ShellHub UI or via standard SSH tools.
 
-This documentation incorporates a description of the features and capabilities, modes of operation, and step-by-step getting started guide for running a self-hosted ShellHub server and use.
+[See More](ae2)
+
+## Why ShellHub?
+
+Managing secure remote shell access to devices, servers, and containers is often complex, and it becomes even more challenging as the infrastructure scales. ShellHub provides the most efficient way to centralize and secure remote shell access.
+
+1. **Remote Access Simplification**:
+   ShellHub simplifies remote access to devices across diverse networks. It eliminates the need for complex VPN setups or direct public access, ensuring secure and manageable connections from anywhere.
+
+2. **Enhancing Security**: Centralized authentication with public key cryptography eliminates the need for password-based authentication, which can be vulnerable to brute-force attacks and password leaks.
+
+3. **Simplifying Access Management:**: Managing access to multiple devices becomes more straightforward with public key authentication. Administrators can easily add or remove access permissions by managing keys centrally on ShellHub.
+
+4. **Controlling Network Access**: Administrators can create detailed firewall rules to control remote shell access to devices, servers and containers. This includes specifying allowed and blocked IP addresses and users, ensuring that only legitimate traffic can reach these systems.
+
+## Key Features
+
+<DocCard item={{
+type: 'link',
+label: 'Self-Hosted ShellHub',
+description: 'Run ShellHub server on your own infrastructure',
+docId: 'self-hosted/deploying',
+href: '/self-hosted'
+}}/>
+
+<DocCardList items={[
+{
+type: 'link',
+label: 'Quick Start with ShellHub Cloud',
+description: 'The simplest way to get started with ShellHub',
+docId: 'overview/getting-started/cloud',
+href: '/overview/getting-started/cloud',
+className: 'nada'
+},
+{
+type: 'link',
+label: 'Self-Hosted ShellHub',
+description: 'Run ShellHub server on your own infrastructure',
+docId: 'self-hosted/deploying',
+href: '/self-hosted'
+},
+]}/>
