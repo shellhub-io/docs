@@ -64,7 +64,3 @@ main {
   border-radius: var(--ifm-card-border-radius);
   border: 1px solid var(--ifm-toc-border-color);
 }
-
-#__docusaurus {
-  background: linear-gradient(215deg,var(--ifm-color-primary-dark),transparent 40%) no-repeat 10vw -40vh,radial-gradient(var(--ifm-color-primary-dark),transparent 10%) no-repeat -60vw -40vh / 105vw 200vh,radial-gradient(var(--ifm-color-primary-dark),transparent 65%) no-repeat 50% calc(100% + 25rem) / 60rem 35rem;
-}
