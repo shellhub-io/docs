@@ -18,8 +18,6 @@ ShellHub is a platform to centralize and secure remote shell access to devices, 
 
 ShellHub operates by installing a lightweight agent on each of your devices, servers or containers. This agent establishes a secure connection with the ShellHub server, allowing you to remotely access and manage these systems through the ShellHub UI or via standard SSH tools.
 
-[See More](ae2)
-
 ## Why ShellHub?
 
 Managing secure remote shell access to devices, servers, and containers is often complex, and it becomes even more challenging as the infrastructure scales. ShellHub provides the most efficient way to centralize and secure remote shell access.
@@ -29,19 +27,11 @@ Managing secure remote shell access to devices, servers, and containers is often
 
 2. **Enhancing Security**: Centralized authentication with public key cryptography eliminates the need for password-based authentication, which can be vulnerable to brute-force attacks and password leaks.
 
-3. **Simplifying Access Management:**: Managing access to multiple devices becomes more straightforward with public key authentication. Administrators can easily add or remove access permissions by managing keys centrally on ShellHub.
+3. **Simplifying Access Management**: Managing access to multiple devices becomes more straightforward with public key authentication. Administrators can easily add or remove access permissions by managing keys centrally on ShellHub.
 
-4. **Controlling Network Access**: Administrators can create detailed firewall rules to control remote shell access to devices, servers and containers. This includes specifying allowed and blocked IP addresses and users, ensuring that only legitimate traffic can reach these systems.
+4. **Controlling Network Access**: Administrators can create detailed firewall rules to control remote shell access to devices, servers and containers. This includes specifying allowed and blocked IP addresses and users, ensuring that only trusted connections can reach these systems.
 
-## Key Features
-
-<DocCard item={{
-type: 'link',
-label: 'Self-Hosted ShellHub',
-description: 'Run ShellHub server on your own infrastructure',
-docId: 'self-hosted/deploying',
-href: '/self-hosted'
-}}/>
+## Next Steps
 
 <DocCardList items={[
 {
