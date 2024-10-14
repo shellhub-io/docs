@@ -100,7 +100,7 @@ const config = {
             type: 'docSidebar',
             position: 'left',
             sidebarId: 'docsSidebar',
-            label: 'Overview',
+            label: 'Home',
           },
           {
             type: 'docSidebar',
