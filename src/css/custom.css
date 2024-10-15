@@ -64,3 +64,38 @@ main {
   border-radius: var(--ifm-card-border-radius);
   border: 1px solid var(--ifm-toc-border-color);
 }
+
+.theme-doc-sidebar-item-category-level-1 {
+  margin-bottom: var(--ifm-spacing-vertical);
+}
+
+.theme-doc-sidebar-item-category-level-1>.menu__list-item-collapsible>.menu__link {
+  font-weight: bold;
+}
+
+.theme-doc-sidebar-item-category-level-1>.menu__list {
+  border-left: 1px solid var(--ifm-toc-border-color);
+  margin-left: var(--ifm-menu-link-padding-horizontal);
+}
+
+ul.menu__list > li > a.menu__link {
+  border-radius: 0.25rem 0 0 0.25rem;
+}
+
+ul.menu__list > li > a.menu__link--active {
+  border-right: 1px solid var(--ifm-color-primary);
+}
+
+.menu__link--sublist-caret::after {
+  transform: rotate(0deg);
+  background: var(--ifm-menu-link-sublist-icon) 50% / 1.2rem 1.2rem;
+}
+
+.menu__list-item--collapsed .menu__link--sublist:after {
+  transform: rotate(180deg);
+}
+
+.theme-doc-sidebar-item-category>.menu__list-item-collapsible>.menu__link--active {
+  color: var(--ifm-menu-color);
+}
+
