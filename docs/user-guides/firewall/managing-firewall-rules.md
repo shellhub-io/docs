@@ -1,4 +1,4 @@
-# Filtering SSH connections with Firewall Rules
+# Managing Firewall Rules
 
 ShellHub provides flexible firewall for filtering SSH connections.
 It gives a fine-grained control over which SSH connections reach the devices.

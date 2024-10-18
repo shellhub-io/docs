@@ -76,6 +76,16 @@ const config = {
     ],
   ],
 
+  headTags: [
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/icon?family=Material+Icons',
+      },
+    },
+  ],
+
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -97,30 +107,6 @@ const config = {
         },
         items: [
           {
-            type: 'docSidebar',
-            position: 'left',
-            sidebarId: 'docsSidebar',
-            label: 'Home',
-          },
-          {
-            type: 'docSidebar',
-            position: 'left',
-            sidebarId: 'userGuidesSidebar',
-            label: 'User Guides',
-          },
-          {
-            type: 'docSidebar',
-            position: 'left',
-            sidebarId: 'selfHostedSidebar',
-            label: 'Self-Hosted',
-          },
-          {
-            type: 'docSidebar',
-            position: 'left',
-            sidebarId: 'developersSidebar',
-            label: 'Developers',
-          },
-          {
             to: 'https://cloud.shellhub.io',
             label: 'Get Started',
             className: 'nav-link_getting-started',
@@ -128,8 +114,8 @@ const config = {
           },
           {
             href: 'https://github.com/shellhub-io/shellhub/',
-            label: 'GitHub',
             position: 'right',
+            className: 'header-github-link',
           },
           {
             type: 'search',
