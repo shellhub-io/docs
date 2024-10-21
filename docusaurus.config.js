@@ -84,6 +84,14 @@ const config = {
         href: 'https://fonts.googleapis.com/icon?family=Material+Icons',
       },
     },
+    {
+      tagName: 'script',
+      attributes: {
+        type: 'text/javascript',
+        async: 'true',
+        src: '/js/tawk.js',
+      },
+    },
   ],
 
   themeConfig:
