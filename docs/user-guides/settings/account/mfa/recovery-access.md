@@ -7,7 +7,7 @@ administrator of the server instance.
 :::
 
 If you lose access to your TOTP app and all recovery codes, you can regain
-access to your account using your [recovery email](../recovery-email).
+access to your account using your recovery email.
 
 1. **Log In to ShellHub**: Access your ShellHub account using your credentials.
 
