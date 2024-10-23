@@ -38,6 +38,6 @@ The **Enterprise Edition** of ShellHub provides advanced features and enhanced s
 The Enterprise Edition can also be fully managed by our team, providing you with the
 benefits of the Enterprise features without the need to maintain your own infrastructure.
 
-See the [Editions](/editions) page for more information.
+See the [Editions](/overview/editions) page for more information.
 :::
 

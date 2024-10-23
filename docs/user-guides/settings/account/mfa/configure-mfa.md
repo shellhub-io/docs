@@ -6,7 +6,7 @@ To enable MFA for your ShellHub account, you must provide a recovery email.
 
 You can configure MFA using a Time-Based One-Time Password (TOTP) app. In order
 to disable MFA, you must provide either the TOTP password, a recovery code, or
-request the MFA reset via your [recovery email](../recovery-email).
+request the MFA reset via your recovery email.
 
 Each recovery code has a unique use. If you use them to log in, you can use the
 same code to deactivate your MFA within 10 minutes.
@@ -51,7 +51,7 @@ your account.
 
 :::note
 If you lost access to your TOTP app and all recovery codes, refers to [Recover
-an Account with MFA](./mfa-recovery)
+an Account with MFA](./recovery-access)
 :::
 
 ### With TOTP code
