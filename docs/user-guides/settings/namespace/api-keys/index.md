@@ -3,9 +3,9 @@
 API keys are unique identifiers that serve as a security mechanism for
 accessing an API. They are essential for controlling access to resources and
 ensuring that only authorized users or applications can make requests. Each API
-key is linked to a specific [namespace](../namespaces/index.md) and grants
-permissions based on the [role](../members/roles.md) assigned to it. API keys
-are particularly useful for:
+key is linked to a specific [namespace](../../../namespaces/index.md) and
+grants permissions based on the [role](../members/roles.md) assigned to it. API
+keys are particularly useful for:
 
 - **Integration with Third-Party Applications**: Allowing external applications
   to securely interact with your API.
