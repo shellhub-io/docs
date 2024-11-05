@@ -1218,6 +1218,11 @@
     "@babel/helper-validator-identifier" "^7.24.7"
     to-fast-properties "^2.0.0"
 
+"@chatwoot/docusaurus-plugin@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@chatwoot/docusaurus-plugin/-/docusaurus-plugin-1.0.1.tgz#88e703a4ba2bb69334605d5d11342b7a6b46621a"
+  integrity sha512-1rcfjUjClEouLM8x9Z5y1omnW0fMUmgl6L0zTqAIQw2JXTCY3ChogowOmWfSELyC85WADMjcuS0whlxaEfQcvA==
+
 "@colors/colors@1.5.0":
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/@colors/colors/-/colors-1.5.0.tgz#bb504579c1cae923e6576a4f5da43d25f97bdbd9"
@@ -2056,11 +2061,6 @@
   integrity sha512-+PmQX0PiAYPMeVYe237LJAYvOMYW1j2rH5YROyS3b4CTVJum34HfRvKvAzozHAQG0TnHNdUfY9nCeUyRAs//cw==
   dependencies:
     defer-to-connect "^2.0.1"
-
-"@tawk.to/tawk-messenger-react@^2.0.2":
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/@tawk.to/tawk-messenger-react/-/tawk-messenger-react-2.0.2.tgz#0992524dcfc530abb3a684724ee6d6a285bd560b"
-  integrity sha512-Nl3JMMIrQiyveSSuP8qYWEu1u+coqz4WCA7TfSjOMDcpyWEiORvOdnMWTsSlhz8rae57HWsCAGLzE507fKtzXA==
 
 "@trysound/sax@0.2.0":
   version "0.2.0"

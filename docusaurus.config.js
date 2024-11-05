@@ -134,7 +134,23 @@ const config = {
         contextualSearch: true,
         searchParameters: {},
       },
+      chatwoot: {
+        websiteToken: "WNSdM8iU6UGw5h7ncy3qVvfh",
+        baseURL: "https://chatwoot.infra.ossystems.io",
+        enableInDevelopment: true,
+        chatwootSettings: {
+          hideMessageBubble: false,
+          position: "right",
+          locale: "en",
+          useBrowserLanguage: false,
+          darkMode: "light",
+          type: "expanded_bubble",
+          launcherTitle: "Chat with us",
+        },
+      },
     }),
+
+  plugins: ['@chatwoot/docusaurus-plugin'],
 };
 
 module.exports = config;
