@@ -57,6 +57,15 @@ Once ShellHub starts, it will always start automatically during the boot process
 unless you explicitly stop it.
 :::
 
+After starting the containers, run the setup script to complete the installation
+and create an initial user:
+
+```
+./bin/setup
+```
+
+This will generate a signed URL. Access this URL to finalize the setup.
+
 Now you can access ShellHub on [http://localhost](http://localhost).
 
 ## Production Deployment
