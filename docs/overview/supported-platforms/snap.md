@@ -31,11 +31,12 @@ This command displays the current settings, showing key configuration details su
 
 By default, should display these keys and values:
 
-| Key            | Value                       |
-|----------------|-----------------------------|
-| private-key    | /etc/shellhub.key           |
-| server-address | https://cloud.shellhub.io   |
-| tenant-id      |                             |
+| Key                | Value                       |
+|--------------------|-----------------------------|
+| private-key        | /etc/shellhub.key           |
+| server-address     | https://cloud.shellhub.io   |
+| tenant-id          |                             |
+| preferred-hostname |                             |
 
 ## Step 3: Setting Configuration Options
 
