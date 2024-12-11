@@ -77,7 +77,7 @@ Replace `<image-name>` with your target image (e.g., `core-image-base`).
 - **Dependencies:** Verify all necessary dependencies for the ShellHub Agent are met.
 - **Yocto Variables:** Ensure all Yocto configuration variables are correctly spelled.
 
-## ShellHub Environment Variables
+## ShellHub Environment Variables for Yocto Project
 
 - **SHELLHUB_SERVER_ADDRESS:** Sets the address for the ShellHub server (default is ShellHub Cloud: https://cloud.shellhub.io).
 - **SHELLHUB_PRIVATE_KEY:** Path to the device’s private key.
