@@ -64,9 +64,29 @@ sudo snap set shellhub server-address=<your-server-address>
 If you don't know how to get your Tenant ID, see [Retrieving Your Tenant ID](/user-guides/namespaces/retrieving-your-tenant-id)
 :::
 
+## Starting ShellHub Agent and Testing
+
 The ShellHub Agent will automatically connect to the server in background.
 
 ![](/img/pending-device-notification.png)
+
+## Troubleshooting Tips
+
+- **Network Connectivity:** Ensure the device can reach the ShellHub server.
+- **Tenant ID & Server Address:** Double-check the variable content values using `snap get shellhub`. Also verify if all variables are correctly spelled.
+- **Logs and Debugging:**
+ Check the ShellHub Agent logs for detailed error messages by running `sudo snap logs shellhub`.
+- **Restarting the ShellHub Agent:**
+  After updating configuration settings, restart the ShellHub Agent to apply changes: `sudo snap restart shellhub`.
+- **Updating the ShellHub Snap Package:**
+  Ensure the ShellHub Snap is up-to-date by running:`sudo snap refresh shellhub`.
+
+## ShellHub Environment Variables for Snap
+
+- **server-address:** Sets the address for the ShellHub server (default is ShellHub Cloud: https://cloud.shellhub.io).
+- **private-key:** Path to the device’s private key.
+- **tenant-id:** Links the device to a specific tenant or namespace.
+- **preferred-hostname:** Suggested hostname for the device, if available.
 
 ## Conclusion
 
