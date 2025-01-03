@@ -146,3 +146,11 @@ ul.menu__list > li > a.menu__link--active {
   color: var(--ifm-menu-color);
 }
 
+.menu__list-item .menu__list-item--collapsed .menu__caret::before {
+  transform: rotate(180deg);
+}
+
+.menu__list-item .menu__caret::before {
+  transform: rotate(0deg);
+  background: var(--ifm-menu-link-sublist-icon) 50% / 1.2rem 1.2rem;
+}
