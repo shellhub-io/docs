@@ -10,7 +10,7 @@ First of all, you'll need to generate required keys for the services:
 $ make keygen
 ```
 
-Set the environment to development:
+Set the environment for development:
 
 ```
 $ echo "SHELLHUB_ENV=development" >> .env.override
@@ -22,20 +22,25 @@ Start the whole environment:
 $ make start
 ```
 
-> Avoid to use `docker-compose` directly (unless you know what you're doing); instead use `bin/docker-compose` wrapper.
+> Avoid using `docker-compose` directly (unless you know what you're doing); instead use `./bin/docker-compose` wrapper.
 
-Wait for all services to be ready then create initial user by running:
+:::info
+Wait for all services to be ready, then proceed:
+:::
 
-```
-$ ./bin/add-user <username> <password> <email>
-```
-
-Create a namespace for grouping devices and set user as owner:
+Then create an initial user by running
 
 ```
-$ TENANT_ID=00000000-0000-4000-0000-000000000000 ./bin/add-namespace <namespace> <owner>
+$ ./bin/cli user create <username> <password> <email>
 ```
 
-> Don't change the value of `TENANT_ID`, this value is hardcoded during agent initialization in development mode.
+Create a namespace for grouping devices and set a user as owner:
+
+```
+$ ./bin/cli namespace create <namespace> <user> 00000000-0000-4000-0000-000000000000
+```
+
+> For development, the `TENANT_ID` specified, `00000000-0000-4000-0000-000000000000`, is required to turn the local
+> environment into a ShellHub Agent running device, as it's a hardcoded value.
 
 When you open ShellHub UI for the first time, be sure to accept pending device.
