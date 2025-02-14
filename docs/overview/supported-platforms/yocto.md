@@ -36,7 +36,7 @@ If you don't know how to get your Tenant ID, see [Retrieving Your Tenant ID](/us
 Edit the `conf/local.conf` file to add these variables:
 
 ```bash
-CORE_IMAGE_EXTRA_INSTALL += "shellhub-agent"
+CORE_IMAGE_EXTRA_INSTALL += "packagegroup-shellhub-runtime"
 SHELLHUB_TENANT_ID = "<your tenant id here>"
 ```
 
