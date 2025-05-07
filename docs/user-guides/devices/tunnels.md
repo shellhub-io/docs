@@ -5,6 +5,10 @@ This feature is only available in [ShellHub Cloud](https://shellhub.io) and
 [ShellHub Enterprise](https://www.shellhub.io/products/enterprise).
 :::
 
+:::warning
+This feature is only available for **ShellHub Agent 0.18.3 or newer**.
+:::
+
 ShellHub HTTP tunnels enable secure, direct access to HTTP services on devices
 with the ShellHub Agent, eliminating the need for SSH local port forwarding. This
 simplifies connectivity, allowing users to access web-based interfaces seamlessly
