@@ -102,7 +102,7 @@ const config = {
         hideOnScroll: false,
         logo: {
           alt: 'ShellHub',
-          src: 'img/logo.png',
+          src: 'img/logo.svg',
           srcDark: 'img/logo-dark.svg',
         },
         items: [
