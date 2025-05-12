@@ -151,7 +151,7 @@ Where:
 
 * `<SERVER-ADDRESS>`: is the ShellHub instance server address
 * `<TENANT-ID>`: is the Tenant ID of your account
-* `<AGENT-VERSION>`: Is the version stated at <SERVER-ADDRESS>/info
+* `<AGENT-VERSION>`: Is the version stated at `<SERVER-ADDRESS>/info`
 
 Reload the configuration
 ```bash
