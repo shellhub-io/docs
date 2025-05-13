@@ -32,7 +32,7 @@ Follow the [Docker Install Instructions](http://docs.docker.com/installation/) o
 You should always use the latest docker or podman version. 
 
 *   Minimum supported Docker version is `18.06`. 
-*   Minimum supporepodman version is `5.0.0`.
+*   Minimum supported Podman version is `5.0.0`.
 
 :::
 
