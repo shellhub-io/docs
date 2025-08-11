@@ -10,5 +10,19 @@
       "depNameTemplate": "shellhub-io/shellhub",
       "versioningTemplate": "semver"
     }
+  ],
+  "packageRules": [
+    {
+      "matchPackagePatterns": [
+        "*"
+      ],
+      "enabled": false
+    },
+    {
+      "matchPackagePatterns": [
+        "shellhub-io/shellhub"
+      ],
+      "enabled": true
+    }
   ]
 }
