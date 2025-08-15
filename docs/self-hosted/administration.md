@@ -36,7 +36,7 @@ Reset user account password from a local running instance of ShellHub.
 
 Add namespace to a local running instance of ShellHub.
 
-**Usage**: `bin/namespace create <namespace> <owner> [tenant]`
+**Usage**: `bin/cli namespace create <namespace> <owner> [tenant]`
 
 > **_NOTE_:** The namespace must adhere to a valid [RFC1123](https://www.rfc-editor.org/rfc/rfc1123) hostname format, but it should not contain dots.
 
