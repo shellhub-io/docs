@@ -6,8 +6,6 @@ OpenAPI, also known as the OpenAPI Specification (OAS), is a specification for d
 Please note that as we are continuously updating and improving our product, there may be discrepancies between the documentation and the current version of the product. If you have any questions or need assistance, please do not hesitate to reach out to us via email and we will be happy to assist you.
 :::
 
-We provide two OpenAPI specifications, the `community` version and the `cloud` version.
-
 import DocCardList from '@theme/DocCardList';
 
 <DocCardList />

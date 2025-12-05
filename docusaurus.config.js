@@ -60,12 +60,8 @@ const config = {
       {
         specs: [
           {
-            id: 'community-openapi',
-            spec: 'https://shellhub-openapi-files.nyc3.digitaloceanspaces.com/community-openapi.yaml',
-          },
-          {
-            id: 'cloud-openapi',
-            spec: 'https://shellhub-openapi-files.nyc3.digitaloceanspaces.com/cloud-openapi.yaml',
+            id: 'shellhub-openapi',
+            spec: 'https://shellhub-openapi-files.nyc3.digitaloceanspaces.com/openapi.yaml',
           },
         ],
         theme: {
