@@ -1,3 +1,3 @@
 export const config = {
-  version: "v0.21.5",
+  version: "v0.22.0",
 };
