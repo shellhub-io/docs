@@ -1,28 +1,33 @@
 {
-  "extends": ["config:base"],
-  "regexManagers": [
+  "extends": [
+    "config:recommended"
+  ],
+  "customManagers": [
     {
-      "fileMatch": ["^src/config\\.js$"],
+      "fileMatch": [
+        "^src/config\\.js$"
+      ],
       "matchStrings": [
         "version:\\s*\"(?<currentValue>v\\d+\\.\\d+\\.\\d+)\""
       ],
       "datasourceTemplate": "github-tags",
       "depNameTemplate": "shellhub-io/shellhub",
-      "versioningTemplate": "semver"
+      "versioningTemplate": "semver",
+      "customType": "regex"
     }
   ],
   "packageRules": [
     {
-      "matchPackagePatterns": [
+      "enabled": false,
+      "matchPackageNames": [
         "*"
-      ],
-      "enabled": false
+      ]
     },
     {
-      "matchPackagePatterns": [
+      "enabled": true,
+      "matchPackageNames": [
         "shellhub-io/shellhub"
-      ],
-      "enabled": true
+      ]
     }
   ]
 }
