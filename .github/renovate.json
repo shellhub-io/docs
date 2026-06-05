@@ -4,8 +4,8 @@
   ],
   "customManagers": [
     {
-      "fileMatch": [
-        "^src/config\\.js$"
+      "managerFilePatterns": [
+        "/^src/config\\.js$/"
       ],
       "matchStrings": [
         "version:\\s*\"(?<currentValue>v\\d+\\.\\d+\\.\\d+)\""
