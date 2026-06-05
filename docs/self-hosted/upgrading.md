@@ -30,15 +30,23 @@ Make sure to backup all database data files before proceeding with upgrade.
 ## Database Migration (MongoDB to PostgreSQL)
 
 Starting with **v0.23.0**, ShellHub introduced a migration pipeline that automatically
-copies all data from MongoDB to PostgreSQL. In **v0.24.0**, PostgreSQL became the default
-and only supported database backend. MongoDB is no longer required.
+copies all data from MongoDB to PostgreSQL. In **v0.24.0**, PostgreSQL became the only
+supported database backend: MongoDB, the `SHELLHUB_DATABASE=migrate` mode, and the
+migration pipeline were all removed.
 
-### How the migration works
+:::caution
+The migration only runs on **v0.23.x**. If you still keep data in MongoDB, upgrade to
+v0.23.x and complete the migration **before** moving to v0.24.0 or later. There is no
+in-place MongoDB-to-PostgreSQL migration on v0.24.0+ — jumping straight from MongoDB to
+v0.24.0 leaves that data behind.
+:::
 
-The migration runs automatically on startup when `SHELLHUB_DATABASE` is set to `migrate`.
-It reads all data from MongoDB, writes it to PostgreSQL, and performs a full validation
-to ensure data integrity. The migration status is visible at `GET /api/migration/status`
-and in the web UI.
+### How the migration works (v0.23.x)
+
+On v0.23.x, the migration runs automatically on startup when `SHELLHUB_DATABASE` is set
+to `migrate`. It reads all data from MongoDB, writes it to PostgreSQL, and performs a
+full validation to ensure data integrity. Check the progress at
+`GET /api/migration/status` (available on v0.23.x), in the web UI, or in the API logs.
 
 Once the migration completes successfully, you can switch to PostgreSQL permanently.
 
@@ -48,11 +56,13 @@ If you are upgrading from v0.22.x or earlier, follow these steps:
 
 1. **Backup your MongoDB data** before doing anything.
 
-2. **Upgrade to v0.23.0 first**. The default `SHELLHUB_DATABASE` is already set to
-   `migrate` in the `.env` file, so no additional configuration is needed.
+2. **Upgrade to v0.23.x first**. The default `SHELLHUB_DATABASE` is already set to
+   `migrate` in the `.env` file, so no additional configuration is needed. Do not skip
+   this release — it is the only one that can migrate your MongoDB data.
 
-3. Start ShellHub and wait for the migration to complete. You can check the status at
-   `GET /api/migration/status` — it will return `{"status":"completed"}` when done.
+3. Start ShellHub and wait for the migration to complete. On v0.23.x you can check the
+   status at `GET /api/migration/status` — it returns `{"status":"completed"}` when done —
+   or follow the web UI and the API logs.
 
 4. Verify the migration completed without errors by checking the API logs.
 
@@ -61,12 +71,6 @@ If you are upgrading from v0.22.x or earlier, follow these steps:
 
 6. Start ShellHub. It will now use PostgreSQL directly. MongoDB is no longer needed.
 
-:::tip
-If you are upgrading directly from v0.22.x or earlier to v0.24.0, you can skip v0.23.0
-entirely. Set `SHELLHUB_DATABASE=migrate` in your `.env.override`, let the migration
-complete, then remove it and restart so it falls back to the default `postgres`.
-:::
-
 :::caution
 Do not remove your MongoDB data or container until you have verified that the migration
 completed successfully and PostgreSQL is working correctly.
@@ -74,7 +78,7 @@ completed successfully and PostgreSQL is working correctly.
 
 ### Upgrading from v0.23.x
 
-If you already ran v0.23.0 with `SHELLHUB_DATABASE=migrate` and the migration completed
+If you already ran v0.23.x with `SHELLHUB_DATABASE=migrate` and the migration completed
 successfully, simply update to v0.24.0. The default database is already set to `postgres`.
 
 ## Upgrade to Enterprise Edition
