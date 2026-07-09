@@ -40,7 +40,7 @@ Refer to the official `docker-compose logs` command <Link to="https://docs.docke
 
 ## Frequently Encountered Issues
 
-IHere is a list of solutions to some frequently encountered issues.
+Here is a list of solutions to some frequently encountered issues.
 If this page doesn't help you solve your problem,
 try doing a search on [GitHub Issues](https://github.com/shellhub-io/shellhub/issues).
 
@@ -82,3 +82,100 @@ And disable it from autostart:
 ```
 sudo update-rc.d apache2 disable
 ```
+
+### SSH session disconnects immediately in a Proxmox unprivileged LXC
+
+:::danger ERROR MESSAGE
+
+```text
+ssh-1 | ... "error":"failed to read the message from socket ... use of closed network connection" ...
+```
+
+On the agent side you may also see:
+
+```text
+inappropriate ioctl for device
+nsenter: reassociate to namespace 'ns/time' failed: Operation not permitted
+```
+
+:::
+
+If the SSH connection drops the moment authentication completes — and the agent
+runs inside an **unprivileged LXC container on Proxmox VE** — the agent can't
+allocate a pseudo-terminal (PTY) for the interactive shell. Unprivileged LXC maps
+the container's root to an unprivileged host user, which restricts both PTY
+allocation (`/dev/ptmx`, `devpts`) and joining the host's namespaces. There are two
+cases, depending on how you run the agent.
+
+:::tip
+
+Not sure which agent you're running? If you installed with the one-line
+`install.sh` script you're on the **standalone** agent — start with the standalone
+steps below. The Docker agent is the one you deploy as a container with
+`--pid=host`.
+
+:::
+
+#### Standalone (native) agent
+
+The native agent only needs a working PTY inside its own container. Most of the
+time the blocker is a leftover `devpts` or `/dev/shm` entry in the container's
+`/etc/fstab` (common in older container templates), which breaks `/dev/pts` on
+modern LXC.
+
+1. Inside the container, remove any stale `devpts` / `tmpfs /dev/shm` lines from
+   `/etc/fstab`.
+2. Confirm `/dev/ptmx` is openable — `ls -l /dev/ptmx` should not show `000`
+   permissions, and `/dev/pts` should be mounted with `gid=5,mode=620`.
+3. Restart the container and reconnect.
+
+If sessions still report `PTY allocation request failed`, raise the PTY limit in the
+container config at `/etc/pve/lxc/<id>.conf` on the Proxmox host:
+
+```ini
+lxc.pty.max: 1024
+lxc.tty.max: 4
+```
+
+:::note
+
+The time namespace only affects `CLOCK_MONOTONIC`/uptime — not wall-clock time — so
+the `nsenter: ... ns/time ... Operation not permitted` line on its own does not
+break a standalone shell. It only matters for the Docker agent below.
+
+:::
+
+#### Docker agent
+
+The Docker agent enters the host's namespaces (via `nsenter` against PID 1) so the
+shell lands on the host rather than inside the agent container. An unprivileged LXC
+can't grant the capabilities this needs — joining the host's **time** namespace
+fails with `Operation not permitted`, and Docker-in-LXC also requires extra
+features to run at all.
+
+On the Proxmox host, edit `/etc/pve/lxc/<id>.conf`:
+
+```ini
+features: nesting=1,keyctl=1
+```
+
+`nesting=1` exposes the procfs/sysfs that Docker needs; `keyctl=1` allows the
+`keyctl()` syscall used by containerd. These are required for **any** Docker
+workload in an unprivileged container.
+
+That gets Docker running, but entering the host's namespaces from an unprivileged
+container hits a hard capability ceiling that no `features` flag lifts. If you need
+the Docker agent, run it in a **privileged** LXC container or a **VM** instead:
+
+```shell
+# Make the container privileged (Proxmox host)
+pct set <id> --unprivileged 0
+```
+
+:::caution
+
+A privileged LXC container is not a security boundary — Proxmox treats it as
+roughly equivalent to host access. For untrusted workloads, prefer a VM, where the
+agent (standalone or Docker) works without any of these tweaks.
+
+:::
