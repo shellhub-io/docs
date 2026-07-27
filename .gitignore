@@ -21,3 +21,5 @@ yarn-error.log*
 
 # Claude Code context files (symlinked from private repo)
 **/CLAUDE.md
+**/CONTEXT.md
+/docs/adr
