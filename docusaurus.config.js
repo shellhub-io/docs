@@ -7,7 +7,7 @@ import { themes as prismThemes } from 'prism-react-renderer';
 const config = {
   title: 'ShellHub',
   tagline: 'Get seamless remote access to any Linux device',
-  url: 'https://docs.shellhub.io/',
+  url: 'https://docsv1.shellhub.io/',
   baseUrl: '/',
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
